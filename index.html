@@ -1,137 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Tours Perú</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Tours Perú</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-
-        header {
-            background: url('tours peru logo.jpg') center/cover no-repeat;
-            background-color: #0a6cff;
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        nav {
-            background: #083b8a;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        section {
-            padding: 40px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        h2 {
-            color: #0a6cff;
-            text-align: center;
-        }
-
-        .tours {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .tour {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25d366;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        footer {
-            background: #083b8a;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-    </style>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+header {
+    background: #0a6cff;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+.lang {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.lang button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+h2 {
+    text-align: center;
+    color: #0a6cff;
+}
+.tours {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.tour {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.tour img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.tour div {
+    padding: 15px;
+}
+.price {
+    font-weight: bold;
+    color: #0a6cff;
+}
+footer {
+    background: #083b8a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>Tours Perú</h1>
-    <p>Vive experiencias inolvidables en el Perú</p>
+    <div class="lang">
+        <button onclick="setLang('es')">ES</button>
+        <button onclick="setLang('en')">EN</button>
+    </div>
+    <h1 id="title">Tours Perú</h1>
+    <p id="subtitle">Experiencias inolvidables en Cusco, Puno y Arequipa</p>
 </header>
 
-<nav>
-    <a href="#tours">Tours</a>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#contacto">Contacto</a>
-</nav>
+<section>
+<h2 id="toursTitle">Nuestros Tours</h2>
 
-<section id="tours">
-    <h2>Nuestros Tours</h2>
-    <div class="tours">
-        <div class="tour">
-            <h3>Machu Picchu</h3>
-            <p>Descubre una de las maravillas del mundo con guías expertos.</p>
-        </div>
-        <div class="tour">
-            <h3>Cusco Histórico</h3>
-            <p>Conoce la capital del Imperio Inca.</p>
-        </div>
-        <div class="tour">
-            <h3>Valle Sagrado</h3>
-            <p>Explora paisajes únicos y cultura viva.</p>
-        </div>
-    </div>
-</section>
+<div class="tours">
 
-<section id="nosotros">
-    <h2>Sobre Nosotros</h2>
-    <p>
-        Somos una agencia de turismo dedicada a ofrecer experiencias auténticas
-        y seguras por todo el Perú.
-    </p>
-</section>
+<div class="tour">
+<img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b">
+<div>
+<h3>Machu Picchu – Cusco</h3>
+<p class="desc">La maravilla del mundo, historia y paisajes únicos.</p>
+<p class="price">S/ 750 | USD 200</p>
+</div>
+</div>
 
-<section id="contacto">
-    <h2>Contacto</h2>
-    <p>Escríbenos para más información y reservas.</p>
-</section>
+<div class="tour">
+<img src="https://images.unsplash.com/photo-1603398938378-e54c9f71cbe3">
+<div>
+<h3>Valle Sagrado – Cusco</h3>
+<p class="desc">Pueblos andinos, cultura viva y montañas.</p>
+<p class="price">S/ 450 | USD 120</p>
+</div>
+</div>
 
-<a class="whatsapp" href="https://wa.me/51952296201" target="_blank">
-    WhatsApp
-</a>
-
-<footer>
-    © 2025 Tours Perú
-</footer>
-
-</body>
-</html>
-
+<div class="tour">
+<img src="https://images.unsplash.com/photo-1580657018950-3c1d9b35c6c0">
+<div>
+<h3>Lago Titicaca – Puno</h3>
+<p class="desc">Islas flotantes y tradiciones ancestrales.</p>
+<p cl
